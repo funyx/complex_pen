@@ -1,0 +1,1 @@
+export class InvalidFormat extends Error {}

@@ -1,3 +1,4 @@
+import { InvalidFormat } from "./error/invalidFormat"
 import { Partner } from "./interface"
 
 export const partnerParser = (input: string): Partner[] => {
@@ -12,7 +13,9 @@ export const partnerParser = (input: string): Partner[] => {
                     partner_id: parseInt(partnerData.partner_id),
                     name: partnerData.name
                 })
-            } catch { }
+            } catch (e) {
+                throw new InvalidFormat("Invalid record format")
+            }
         }
     }
 

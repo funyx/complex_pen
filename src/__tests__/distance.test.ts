@@ -1,5 +1,6 @@
 import { partnerParser } from "../parser";
 import { distance, inCircle } from "../distance";
+import { Partner } from "../interface";
 import { data } from "../__mocks__/partners"
 
 describe('distance', () => {
@@ -110,5 +111,14 @@ describe('inCercle', () => {
                 100
             ).length
         ).toEqual(25)
+
+        expect(
+            // last partner in range is 29
+            inCircle<Partner>(
+                { latitude: 42.14425334441039, longitude: 24.749097545929303 },
+                partnerParser(data),
+                100
+            ).sort((a, b) => (a.partner_id < b.partner_id) ? -1 : 1).pop()?.partner_id
+        ).toEqual(29)
     })
 });
