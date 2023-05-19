@@ -1,0 +1,42 @@
+{
+  "name": "complex_pen",
+  "version": "0.0.1",
+  "description": "decimal geo coordinates distance calculator",
+  "main": "index.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "yarn clean && yarn build:types",
+    "build:types": "tsc -p tsconfig.build.json",
+    "clean": "rimraf dist",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/funyx/complex_pen.git"
+  },
+  "keywords": [
+    "geo",
+    "distance",
+    "calculator"
+  ],
+  "author": "funyx <ddobchev@gmail.com> (https://github.com/funyx)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/funyx/complex_pen/issues"
+  },
+  "homepage": "https://github.com/funyx/complex_pen#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.1",
+    "@types/node": "^20.1.7",
+    "eslint": "^8.40.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jest": "^29.5.0",
+    "prettier": "^2.8.8",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  }
+}
